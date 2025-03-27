@@ -48,7 +48,7 @@ jobs:
           fi
 
           # Cập nhật Dockerfile của service tương ứng
-          sed -i "s|\(FROM .*:\)[^ ]*|\1${{ steps.get_tag.outputs.tag }}|g" backend/${{ env.REPO_NAME }}/build/Dockerfile
+          sed -i "s|\(FROM .*:\)[^ ]*|\1${{ steps.get_tag.outputs.tag }}|g" backend/Twistedfate/build/Dockerfile
 
           git add .
           git commit -m "Update ${{ env.REPO_NAME }} to tag ${{ steps.get_tag.outputs.tag }}"
