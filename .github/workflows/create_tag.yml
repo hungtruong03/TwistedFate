@@ -3,7 +3,7 @@ name: create tag
 on:
   push:
     branches:
-      - main # Thay thế với nhánh bạn muốn chạy hành động này
+      - main
 
 jobs:
   create-or-update-tag:
